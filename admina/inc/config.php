@@ -1,7 +1,7 @@
 <?php
 ini_set( "display_errors", true );
 define( "HOST", "" );
-//nama database
+//nama database setting disini
 define( "DATABASE_NAME", "rgszte" );
 define( "DB_USERNAME", "root" );
 //password mysql

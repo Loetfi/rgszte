@@ -76,6 +76,22 @@ class Database {
         return $obj;
     }
 
+
+    /**
+    * fetch all data
+    * @param  string $table table name
+    * @return array recordset
+    */
+    public function raw_fetch_all($query)
+    {
+        $sel = $this->pdo->prepare("$query");
+        $sel->execute();
+        $sel->setFetchMode( PDO::FETCH_OBJ ); 
+        // $obj = $sel->fetch();
+        return $sel;
+    }
+
+
     /**
     * fetch all data
     * @param  string $table table name

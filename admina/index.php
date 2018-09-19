@@ -4,6 +4,7 @@ include "inc/config.php";
 require_once "inc/fungsi.php";
 if (isset($_SESSION['login'])) {
 
+// print_r($path_url); die();
 //call header file
 include  "header.php";
 //switch for static menu 
@@ -31,6 +32,15 @@ switch ($path_url) {
 	case 'user-management':
 		include "modul/user_management/user_management.php";
 		break;
+
+		case 'wilayah':
+		include "modul/wilayah/pilih.php";
+		break;
+
+	case 'kabupaten':
+		include "modul/kabupaten/kabupaten.php";
+	break;
+
 	//end case system menu
 	case 'change-password':
 		include "modul/change_password/change_pass.php";
@@ -38,6 +48,8 @@ switch ($path_url) {
 	case 'profil':
 		include "modul/profil/profil.php";
 		break;
+
+	
 	
 	/*default:
 		include "modul/home/home.php";
